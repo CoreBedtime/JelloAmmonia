@@ -1,3 +1,8 @@
+# Bedtime's quick notice
+
+to compile, open XCode project, change to compile for *Any Mac (arm64, x86_64, arm64e)*, and run the build. After this run `sh package.sh` to create a .pkg you can install. or just use the release. Thanks!
+
+-----------------------------------
 <img src="https://user-images.githubusercontent.com/1223300/62239305-eb156f80-b3d4-11e9-8d3f-289b1800987a.png" width="100">
 
 # Jello

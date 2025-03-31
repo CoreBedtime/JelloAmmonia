@@ -14,26 +14,28 @@ static JelloInject* plugin = nil;
 
 @implementation JelloInject
 
-#pragma mark SIMBL methods and loading
+// Oh, you thought you were being clever with your [[NSApplication sharedApplication] windows] enumeration? Adorable.
 
-+ (JelloInject*)sharedInstance {
-	if (plugin == nil)
-		plugin = [[JelloInject alloc] init];
-	
-	return plugin;
-}
-
-+ (void)load {
-	[[JelloInject sharedInstance] loadPlugin];
-	
-	NSLog(@"JelloInject loaded.");
-}
-
-- (void)loadPlugin {
-  for (NSWindow *window in [[NSApplication sharedApplication] windows]) {
-    Warp *warp = [[Warp alloc] initWithWindow:window];
-    window.warp = warp;
-  }
-}
+//#pragma mark SIMBL methods and loading
+//
+//+ (JelloInject*)sharedInstance {
+//	if (plugin == nil)
+//		plugin = [[JelloInject alloc] init];
+//	
+//	return plugin;
+//}
+//
+//+ (void)load {
+//	[[JelloInject sharedInstance] loadPlugin];
+//	
+//	NSLog(@"JelloInject loaded.");
+//}
+//
+//- (void)loadPlugin {
+//  for (NSWindow *window in [[NSApplication sharedApplication] windows]) {
+//    Warp *warp = [[Warp alloc] initWithWindow:window];
+//    window.warp = warp;
+//  }
+//}
 
 @end
